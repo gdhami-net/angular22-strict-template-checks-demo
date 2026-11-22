@@ -23,32 +23,32 @@ const relative = (s) =>
 
 // ---------------------------------------------------------------- 1. the table
 // One entry per row of matrix/run-matrix.mjs, in the order of its SETUPS:
-// default, + strictUnknownElements, + strictUnclaimedEventNames,
+// default, + strictUnknownElements, + strictUnclaimedEventNames, + both flags,
 // tsconfig.strict.json, + strictUnknownElementWithDirectives (the wrong name).
 const S = 'silent';
 const EXPECTED = {
-  'forgotten-import': [S, 'error NG8001', S, 'error NG8001', S],
-  'lowercase-output-typo': [S, S, S, S, S],
-  'camelcase-output-typo': [S, S, 'error NG8030', 'error NG8030', S],
-  'native-event-typo': [S, S, S, S, S],
-  'width-number-literal': ['warning NG8119', 'warning NG8119', 'warning NG8119', 'error NG8119', 'warning NG8119'],
-  'width-number-field': [S, S, S, S, S],
-  'schema-forgotten-import': [S, S, S, S, S],
-  'schema-camelcase-output-typo': [S, S, 'error NG8030', 'error NG8030', S],
-  'schema-custom-element-event': [S, S, S, S, S],
-  'camelcase-dom-event': [S, S, 'error NG8030', 'error NG8030', S],
-  'dashed-dom-event': [S, S, S, S, S],
-  'case-only-typo': [S, S, S, S, S],
-  'lowercase-typo-2': [S, S, S, S, S],
-  'capitalised-typo': [S, S, 'error NG8030', 'error NG8030', S],
-  'width-string-literal': ['warning NG8119', 'warning NG8119', 'warning NG8119', 'error NG8119', 'warning NG8119'],
-  'width-px-unit': [S, S, S, S, S],
-  'width-zero': [S, S, S, S, S],
-  'opacity-number': [S, S, S, S, S],
-  'width-conditional': [S, S, S, S, S],
-  'style-object': [S, S, S, S, S],
+  'forgotten-import': [S, 'error NG8001', S, 'error NG8001', 'error NG8001', S],
+  'lowercase-output-typo': [S, S, S, S, S, S],
+  'camelcase-output-typo': [S, S, 'error NG8030', 'error NG8030', 'error NG8030', S],
+  'native-event-typo': [S, S, S, S, S, S],
+  'width-number-literal': ['warning NG8119', 'warning NG8119', 'warning NG8119', 'warning NG8119', 'error NG8119', 'warning NG8119'],
+  'width-number-field': [S, S, S, S, S, S],
+  'schema-forgotten-import': [S, S, S, S, S, S],
+  'schema-camelcase-output-typo': [S, S, 'error NG8030', 'error NG8030', 'error NG8030', S],
+  'schema-custom-element-event': [S, S, S, S, S, S],
+  'camelcase-dom-event': [S, S, 'error NG8030', 'error NG8030', 'error NG8030', S],
+  'dashed-dom-event': [S, S, S, S, S, S],
+  'case-only-typo': [S, S, S, S, S, S],
+  'lowercase-typo-2': [S, S, S, S, S, S],
+  'capitalised-typo': [S, S, 'error NG8030', 'error NG8030', 'error NG8030', S],
+  'width-string-literal': ['warning NG8119', 'warning NG8119', 'warning NG8119', 'warning NG8119', 'error NG8119', 'warning NG8119'],
+  'width-px-unit': [S, S, S, S, S, S],
+  'width-zero': [S, S, S, S, S, S],
+  'opacity-number': [S, S, S, S, S, S],
+  'width-conditional': [S, S, S, S, S, S],
+  'style-object': [S, S, S, S, S, S],
 };
-const SETUP_IDS = ['default', 'unknown-elements', 'unclaimed-events', 'all', 'wrong-name'];
+const SETUP_IDS = ['default', 'unknown-elements', 'unclaimed-events', 'both', 'all', 'wrong-name'];
 
 const report = runMatrix();
 check('ngc is @angular/compiler-cli 22.3.0 with TypeScript 6.0.3',
@@ -64,7 +64,7 @@ for (const id of SETUP_IDS) {
   check(`setup ${id}: no diagnostic outside the rows`, u.length === 0, u.map((d) => `${d.file}:${d.line} ${d.code}`).join(', '));
 }
 const exits = SETUP_IDS.map((id) => report.setups[id].exitCode);
-check(`ngc exit codes ${exits.join(', ')} (warnings alone exit 0)`, exits.join() === '0,1,1,1,0');
+check(`ngc exit codes ${exits.join(', ')} (warnings alone exit 0)`, exits.join() === '0,1,1,1,1,0');
 
 const raw = (id) => readFileSync(join(root, 'results', 'raw', `ngc-${id}.txt`), 'utf8');
 check('the wrong flag name changes nothing: same ngc output as the default setup',

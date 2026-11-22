@@ -5,7 +5,7 @@ main-FY5QV5XP.js    | main          | 159.07 kB |                44.70 kB
 
                     | Initial total | 159.07 kB |                44.70 kB
 
-Application bundle generation complete. [1.798 seconds] - 2026-11-22T18:49:37.258Z
+Application bundle generation complete. [3.096 seconds] - 2026-11-22T19:12:06.858Z
 
 Output location: .\dist\production
 

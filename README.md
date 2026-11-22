@@ -18,7 +18,7 @@ don't work:
 of `SaveButton`'s outputs `saved` and `draftSaved`. `clikc` is a typo of `click`. Both
 widths are the number 500 with no unit.
 
-The demo compiles that component (and a few edge cases) with `ngc` under five compiler
+The demo compiles that component (and a few edge cases) with `ngc` under six compiler
 setups and records every diagnostic. Then it runs `ng build` with the default settings
 and with the strict settings, and opens the built app in headless Edge next to a fixed
 copy of the same template.
@@ -56,29 +56,29 @@ copy of the same template.
 
 ## The full table (`results/matrix.md`)
 
-| binding | file | default (strictTemplates) | + strictUnknownElements | + strictUnclaimedEventNames | tsconfig.strict.json (both + NG8119 as error) | + strictUnknownElementWithDirectives |
-| --- | --- | --- | --- | --- | --- | --- |
-| `<app-uploader [formControl]="avatar" />` | profile-form.html | silent | error NG8001 | silent | error NG8001 | silent |
-| `(saveed)="save()"` | profile-form.html | silent | silent | silent | silent | silent |
-| `(draftSavd)="saveDraft()"` | profile-form.html | silent | silent | error NG8030 | error NG8030 | silent |
-| `(clikc)="reset()"` | profile-form.html | silent | silent | silent | silent | silent |
-| `[style.width]="500"` | profile-form.html | warning NG8119 | warning NG8119 | warning NG8119 | error NG8119 | warning NG8119 |
-| `[style.width]="barWidth"` | profile-form.html | silent | silent | silent | silent | silent |
-| `<app-uploader [formControl]="avatar" />` | custom-elements-schema.ts | silent | silent | silent | silent | silent |
-| `(draftSavd)="noop()"` | custom-elements-schema.ts | silent | silent | error NG8030 | error NG8030 | silent |
-| `(pointSelected)="noop()"` | custom-elements-schema.ts | silent | silent | silent | silent | silent |
-| `(fileDropped)="noop()"` | custom-dom-event.ts | silent | silent | error NG8030 | error NG8030 | silent |
-| `(file-dropped)="noop()"` | custom-dom-event.ts | silent | silent | silent | silent | silent |
-| `(draftsaved)="noop()"` | lowercase-typo.ts | silent | silent | silent | silent | silent |
-| `(svaed)="noop()"` | lowercase-typo.ts | silent | silent | silent | silent | silent |
-| `(Saved)="noop()"` | lowercase-typo.ts | silent | silent | error NG8030 | error NG8030 | silent |
-| `[style.width]="'500'"` | style-values.ts | warning NG8119 | warning NG8119 | warning NG8119 | error NG8119 | warning NG8119 |
-| `[style.width.px]="500"` | style-values.ts | silent | silent | silent | silent | silent |
-| `[style.width]="0"` | style-values.ts | silent | silent | silent | silent | silent |
-| `[style.opacity]="0.5"` | style-values.ts | silent | silent | silent | silent | silent |
-| `[style.width]="wide ? 500 : 300"` | style-values.ts | silent | silent | silent | silent | silent |
-| `[style]="{ width: 500 }"` | style-values.ts | silent | silent | silent | silent | silent |
-| ngc exit code | | 0 | 1 | 1 | 1 | 0 |
+| binding | file | default (strictTemplates) | + strictUnknownElements | + strictUnclaimedEventNames | + both flags | tsconfig.strict.json (both + NG8119 as error) | + strictUnknownElementWithDirectives |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `<app-uploader [formControl]="avatar" />` | profile-form.html | silent | error NG8001 | silent | error NG8001 | error NG8001 | silent |
+| `(saveed)="save()"` | profile-form.html | silent | silent | silent | silent | silent | silent |
+| `(draftSavd)="saveDraft()"` | profile-form.html | silent | silent | error NG8030 | error NG8030 | error NG8030 | silent |
+| `(clikc)="reset()"` | profile-form.html | silent | silent | silent | silent | silent | silent |
+| `[style.width]="500"` | profile-form.html | warning NG8119 | warning NG8119 | warning NG8119 | warning NG8119 | error NG8119 | warning NG8119 |
+| `[style.width]="barWidth"` | profile-form.html | silent | silent | silent | silent | silent | silent |
+| `<app-uploader [formControl]="avatar" />` | custom-elements-schema.ts | silent | silent | silent | silent | silent | silent |
+| `(draftSavd)="noop()"` | custom-elements-schema.ts | silent | silent | error NG8030 | error NG8030 | error NG8030 | silent |
+| `(pointSelected)="noop()"` | custom-elements-schema.ts | silent | silent | silent | silent | silent | silent |
+| `(fileDropped)="noop()"` | custom-dom-event.ts | silent | silent | error NG8030 | error NG8030 | error NG8030 | silent |
+| `(file-dropped)="noop()"` | custom-dom-event.ts | silent | silent | silent | silent | silent | silent |
+| `(draftsaved)="noop()"` | lowercase-typo.ts | silent | silent | silent | silent | silent | silent |
+| `(svaed)="noop()"` | lowercase-typo.ts | silent | silent | silent | silent | silent | silent |
+| `(Saved)="noop()"` | lowercase-typo.ts | silent | silent | error NG8030 | error NG8030 | error NG8030 | silent |
+| `[style.width]="'500'"` | style-values.ts | warning NG8119 | warning NG8119 | warning NG8119 | warning NG8119 | error NG8119 | warning NG8119 |
+| `[style.width.px]="500"` | style-values.ts | silent | silent | silent | silent | silent | silent |
+| `[style.width]="0"` | style-values.ts | silent | silent | silent | silent | silent | silent |
+| `[style.opacity]="0.5"` | style-values.ts | silent | silent | silent | silent | silent | silent |
+| `[style.width]="wide ? 500 : 300"` | style-values.ts | silent | silent | silent | silent | silent | silent |
+| `[style]="{ width: 500 }"` | style-values.ts | silent | silent | silent | silent | silent | silent |
+| ngc exit code | | 0 | 1 | 1 | 1 | 1 | 0 |
 
 The compiler's own output for each setup is in `results/raw/ngc-<setup>.txt`; the two
 `ng build` runs are in `results/ng-build-default.txt` and `results/ng-build-strict.txt`;

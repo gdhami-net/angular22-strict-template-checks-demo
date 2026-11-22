@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "outDir": "../out-tsc/matrix-both",
+    "types": []
+  },
+  "include": [
+    "../src/**/*.ts",
+    "edge/**/*.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictUnknownElements": true,
+    "strictUnclaimedEventNames": true
+  }
+}

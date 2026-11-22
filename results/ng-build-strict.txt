@@ -1,6 +1,6 @@
 ❯ Building...
 ✔ Building...
-Application bundle generation failed. [1.576 seconds] - 2026-11-22T18:49:43.819Z
+Application bundle generation failed. [1.749 seconds] - 2026-11-22T19:12:15.130Z
 
 X [ERROR] NG8001: 'app-uploader' is not a known element:
 1. If 'app-uploader' is an Angular component, then verify that it is included in the '@Component.imports' of this component.

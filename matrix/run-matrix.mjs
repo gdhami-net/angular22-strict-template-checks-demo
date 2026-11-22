@@ -19,6 +19,7 @@ export const SETUPS = [
   { id: 'default', label: 'default (strictTemplates)' },
   { id: 'unknown-elements', label: '+ strictUnknownElements' },
   { id: 'unclaimed-events', label: '+ strictUnclaimedEventNames' },
+  { id: 'both', label: '+ both flags' },
   { id: 'all', label: 'tsconfig.strict.json (both + NG8119 as error)' },
   { id: 'wrong-name', label: '+ strictUnknownElementWithDirectives' },
 ];
