@@ -25,7 +25,7 @@ copy of the same template.
 
 ## What it proves
 
-- With the settings `ng new` writes (`strictTemplates: true`), Angular 22.3.0 reports one
+- With `strictTemplates` on (the compiler's default; `ng new` writes no line for it), Angular 22.3.0 reports one
   of the five lines: `[style.width]="500"`, as **warning NG8119**. `ng build` exits 0.
 - `strictUnknownElements: true` adds **error NG8001** on `<app-uploader [formControl]>`:
   `'app-uploader' is not a known element`. Without it, the `[formControl]` directive
