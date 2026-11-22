@@ -1,0 +1,6 @@
+<app-uploader [formControl]="avatar" />
+<app-save-button (saveed)="save()" (draftSavd)="saveDraft()" />
+<button type="button" class="reset" (clikc)="reset()">Reset</button>
+<div class="bar literal" [style.width]="500"></div>
+<div class="bar field" [style.width]="barWidth"></div>
+<p class="counts">saves: {{ saves() }}, drafts: {{ drafts() }}, resets: {{ resets() }}</p>

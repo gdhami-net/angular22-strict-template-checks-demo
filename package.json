@@ -1,0 +1,30 @@
+{
+  "name": "angular22-strict-template-checks-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "What Angular 22.3's three new template checks report on five template lines that compile and do nothing: a component that was never imported, a misspelled output, and a style width with no unit.",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "matrix": "node matrix/run-matrix.mjs",
+    "check": "node check.mjs"
+  },
+  "dependencies": {
+    "@angular/common": "22.3.0",
+    "@angular/compiler": "22.3.0",
+    "@angular/core": "22.3.0",
+    "@angular/forms": "22.3.0",
+    "@angular/platform-browser": "22.3.0",
+    "rxjs": "7.8.2",
+    "tslib": "2.9.1"
+  },
+  "devDependencies": {
+    "@angular/build": "22.3.0",
+    "@angular/cli": "22.3.0",
+    "@angular/compiler-cli": "22.3.0",
+    "playwright-core": "1.65.1",
+    "typescript": "6.0.3"
+  }
+}

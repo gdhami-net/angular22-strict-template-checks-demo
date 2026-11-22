@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "outDir": "../out-tsc/matrix-default",
+    "types": []
+  },
+  "include": [
+    "../src/**/*.ts",
+    "edge/**/*.ts"
+  ]
+}

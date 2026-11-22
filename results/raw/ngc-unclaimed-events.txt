@@ -1,0 +1,51 @@
+../src/app/profile-form.html:2:37 - error NG8030: Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.
+1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.
+2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.
+3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options.
+
+2 <app-save-button (saveed)="save()" (draftSavd)="saveDraft()" />
+                                      ~~~~~~~~~
+
+  ../src/app/profile-form.ts:14:16
+    14   templateUrl: './profile-form.html',
+                      ~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ProfileForm.
+edge/custom-dom-event.ts:21:21 - error NG8030: Event 'fileDropped' is not emitted by any directive applied to 'app-drop-zone' and it isn't a known native DOM event.
+1. If 'fileDropped' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.
+2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.
+3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options.
+
+21     <app-drop-zone (fileDropped)="noop()" />
+                       ~~~~~~~~~~~
+
+edge/custom-elements-schema.ts:13:23 - error NG8030: Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.
+1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.
+2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.
+3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options.
+
+13     <app-save-button (draftSavd)="noop()" />
+                         ~~~~~~~~~
+
+edge/lowercase-typo.ts:12:23 - error NG8030: Event 'Saved' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.
+1. If 'Saved' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.
+2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.
+3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options.
+
+12     <app-save-button (Saved)="noop()" />
+                         ~~~~~
+
+../src/app/profile-form.html:4:27 - warning NG8119: Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]="500" or [style.width]="'500px'" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119
+
+4 <div class="bar literal" [style.width]="500"></div>
+                            ~~~~~~~~~~~
+
+  ../src/app/profile-form.ts:14:16
+    14   templateUrl: './profile-form.html',
+                      ~~~~~~~~~~~~~~~~~~~~~
+    Warning occurs in the template of component ProfileForm.
+edge/style-values.ts:7:11 - warning NG8119: Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]="500" or [style.width]="'500px'" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119
+
+7     <div [style.width]="'500'"></div>
+            ~~~~~~~~~~~
+
+

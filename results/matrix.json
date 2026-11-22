@@ -1,0 +1,449 @@
+{
+  "compilerCli": "22.3.0",
+  "typescript": "6.0.3",
+  "setups": {
+    "default": {
+      "label": "default (strictTemplates)",
+      "exitCode": 0,
+      "diagnostics": [
+        {
+          "file": "src/app/profile-form.html",
+          "line": 4,
+          "column": 27,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        },
+        {
+          "file": "matrix/edge/style-values.ts",
+          "line": 7,
+          "column": 11,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        }
+      ],
+      "unmatched": []
+    },
+    "unknown-elements": {
+      "label": "+ strictUnknownElements",
+      "exitCode": 1,
+      "diagnostics": [
+        {
+          "file": "src/app/profile-form.html",
+          "line": 1,
+          "column": 1,
+          "category": "error",
+          "code": "NG8001",
+          "message": "'app-uploader' is not a known element:\n1. If 'app-uploader' is an Angular component, then verify that it is included in the '@Component.imports' of this component.\n2. If 'app-uploader' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message. Find more at https://next.angular.dev/errors/NG8001"
+        },
+        {
+          "file": "src/app/profile-form.html",
+          "line": 4,
+          "column": 27,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        },
+        {
+          "file": "matrix/edge/style-values.ts",
+          "line": 7,
+          "column": 11,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        }
+      ],
+      "unmatched": []
+    },
+    "unclaimed-events": {
+      "label": "+ strictUnclaimedEventNames",
+      "exitCode": 1,
+      "diagnostics": [
+        {
+          "file": "src/app/profile-form.html",
+          "line": 2,
+          "column": 37,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.\n1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "matrix/edge/custom-dom-event.ts",
+          "line": 21,
+          "column": 21,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'fileDropped' is not emitted by any directive applied to 'app-drop-zone' and it isn't a known native DOM event.\n1. If 'fileDropped' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "matrix/edge/custom-elements-schema.ts",
+          "line": 13,
+          "column": 23,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.\n1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "matrix/edge/lowercase-typo.ts",
+          "line": 12,
+          "column": 23,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'Saved' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.\n1. If 'Saved' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "src/app/profile-form.html",
+          "line": 4,
+          "column": 27,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        },
+        {
+          "file": "matrix/edge/style-values.ts",
+          "line": 7,
+          "column": 11,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        }
+      ],
+      "unmatched": []
+    },
+    "all": {
+      "label": "tsconfig.strict.json (both + NG8119 as error)",
+      "exitCode": 1,
+      "diagnostics": [
+        {
+          "file": "src/app/profile-form.html",
+          "line": 1,
+          "column": 1,
+          "category": "error",
+          "code": "NG8001",
+          "message": "'app-uploader' is not a known element:\n1. If 'app-uploader' is an Angular component, then verify that it is included in the '@Component.imports' of this component.\n2. If 'app-uploader' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message. Find more at https://next.angular.dev/errors/NG8001"
+        },
+        {
+          "file": "src/app/profile-form.html",
+          "line": 2,
+          "column": 37,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.\n1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "matrix/edge/custom-dom-event.ts",
+          "line": 21,
+          "column": 21,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'fileDropped' is not emitted by any directive applied to 'app-drop-zone' and it isn't a known native DOM event.\n1. If 'fileDropped' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "matrix/edge/custom-elements-schema.ts",
+          "line": 13,
+          "column": 23,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.\n1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "matrix/edge/lowercase-typo.ts",
+          "line": 12,
+          "column": 23,
+          "category": "error",
+          "code": "NG8030",
+          "message": "Event 'Saved' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.\n1. If 'Saved' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.\n2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.\n3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options."
+        },
+        {
+          "file": "src/app/profile-form.html",
+          "line": 4,
+          "column": 27,
+          "category": "error",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        },
+        {
+          "file": "matrix/edge/style-values.ts",
+          "line": 7,
+          "column": 11,
+          "category": "error",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        }
+      ],
+      "unmatched": []
+    },
+    "wrong-name": {
+      "label": "+ strictUnknownElementWithDirectives",
+      "exitCode": 0,
+      "diagnostics": [
+        {
+          "file": "src/app/profile-form.html",
+          "line": 4,
+          "column": 27,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        },
+        {
+          "file": "matrix/edge/style-values.ts",
+          "line": 7,
+          "column": 11,
+          "category": "warning",
+          "code": "NG8119",
+          "message": "Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]=\"500\" or [style.width]=\"'500px'\" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119"
+        }
+      ],
+      "unmatched": []
+    }
+  },
+  "table": [
+    {
+      "row": "forgotten-import",
+      "file": "src/app/profile-form.html",
+      "binding": "<app-uploader [formControl]=\"avatar\" />",
+      "short": "<app-uploader [formControl]>",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "error NG8001",
+        "unclaimed-events": "silent",
+        "all": "error NG8001",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "lowercase-output-typo",
+      "file": "src/app/profile-form.html",
+      "binding": "(saveed)=\"save()\"",
+      "short": "(saveed)",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "camelcase-output-typo",
+      "file": "src/app/profile-form.html",
+      "binding": "(draftSavd)=\"saveDraft()\"",
+      "short": "(draftSavd)",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "error NG8030",
+        "all": "error NG8030",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "native-event-typo",
+      "file": "src/app/profile-form.html",
+      "binding": "(clikc)=\"reset()\"",
+      "short": "(clikc)",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "width-number-literal",
+      "file": "src/app/profile-form.html",
+      "binding": "[style.width]=\"500\"",
+      "short": "[style.width]=\"500\"",
+      "cells": {
+        "default": "warning NG8119",
+        "unknown-elements": "warning NG8119",
+        "unclaimed-events": "warning NG8119",
+        "all": "error NG8119",
+        "wrong-name": "warning NG8119"
+      }
+    },
+    {
+      "row": "width-number-field",
+      "file": "src/app/profile-form.html",
+      "binding": "[style.width]=\"barWidth\"",
+      "short": "[style.width]=\"barWidth\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "schema-forgotten-import",
+      "file": "matrix/edge/custom-elements-schema.ts",
+      "binding": "<app-uploader [formControl]=\"avatar\" />",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "schema-camelcase-output-typo",
+      "file": "matrix/edge/custom-elements-schema.ts",
+      "binding": "(draftSavd)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "error NG8030",
+        "all": "error NG8030",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "schema-custom-element-event",
+      "file": "matrix/edge/custom-elements-schema.ts",
+      "binding": "(pointSelected)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "camelcase-dom-event",
+      "file": "matrix/edge/custom-dom-event.ts",
+      "binding": "(fileDropped)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "error NG8030",
+        "all": "error NG8030",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "dashed-dom-event",
+      "file": "matrix/edge/custom-dom-event.ts",
+      "binding": "(file-dropped)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "case-only-typo",
+      "file": "matrix/edge/lowercase-typo.ts",
+      "binding": "(draftsaved)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "lowercase-typo-2",
+      "file": "matrix/edge/lowercase-typo.ts",
+      "binding": "(svaed)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "capitalised-typo",
+      "file": "matrix/edge/lowercase-typo.ts",
+      "binding": "(Saved)=\"noop()\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "error NG8030",
+        "all": "error NG8030",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "width-string-literal",
+      "file": "matrix/edge/style-values.ts",
+      "binding": "[style.width]=\"'500'\"",
+      "cells": {
+        "default": "warning NG8119",
+        "unknown-elements": "warning NG8119",
+        "unclaimed-events": "warning NG8119",
+        "all": "error NG8119",
+        "wrong-name": "warning NG8119"
+      }
+    },
+    {
+      "row": "width-px-unit",
+      "file": "matrix/edge/style-values.ts",
+      "binding": "[style.width.px]=\"500\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "width-zero",
+      "file": "matrix/edge/style-values.ts",
+      "binding": "[style.width]=\"0\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "opacity-number",
+      "file": "matrix/edge/style-values.ts",
+      "binding": "[style.opacity]=\"0.5\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "width-conditional",
+      "file": "matrix/edge/style-values.ts",
+      "binding": "[style.width]=\"wide ? 500 : 300\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    },
+    {
+      "row": "style-object",
+      "file": "matrix/edge/style-values.ts",
+      "binding": "[style]=\"{ width: 500 }\"",
+      "cells": {
+        "default": "silent",
+        "unknown-elements": "silent",
+        "unclaimed-events": "silent",
+        "all": "silent",
+        "wrong-name": "silent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "angularCompilerOptions": {
+    "strictUnknownElements": true,
+    "strictUnclaimedEventNames": true,
+    "extendedDiagnostics": {
+      "checks": {
+        "numericCssPropertyRequiresUnit": "error"
+      }
+    }
+  }
+}

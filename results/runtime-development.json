@@ -1,0 +1,65 @@
+{
+  "errors": [
+    "ERROR RuntimeError: NG01203: No value accessor for form control unspecified name attribute. Find more at https://v22.angular.dev/errors/NG01203"
+  ],
+  "app-profile-form": {
+    "before": {
+      "uploaderChildren": 0,
+      "uploaderText": "",
+      "hostWidth": 800,
+      "literalBar": {
+        "width": 800,
+        "style": null
+      },
+      "fieldBar": {
+        "width": 800,
+        "style": null
+      },
+      "counts": ""
+    },
+    "after": {
+      "uploaderChildren": 0,
+      "uploaderText": "",
+      "hostWidth": 800,
+      "literalBar": {
+        "width": 800,
+        "style": null
+      },
+      "fieldBar": {
+        "width": 800,
+        "style": null
+      },
+      "counts": "saves: 0, drafts: 0, resets: 0"
+    }
+  },
+  "app-profile-form-fixed": {
+    "before": {
+      "uploaderChildren": 2,
+      "uploaderText": "Avatar no file chosen",
+      "hostWidth": 800,
+      "literalBar": {
+        "width": 500,
+        "style": "width: 500px;"
+      },
+      "fieldBar": {
+        "width": 500,
+        "style": "width: 500px;"
+      },
+      "counts": "saves: 0, drafts: 0, resets: 0"
+    },
+    "after": {
+      "uploaderChildren": 2,
+      "uploaderText": "Avatar no file chosen",
+      "hostWidth": 800,
+      "literalBar": {
+        "width": 500,
+        "style": "width: 500px;"
+      },
+      "fieldBar": {
+        "width": 500,
+        "style": "width: 500px;"
+      },
+      "counts": "saves: 1, drafts: 1, resets: 1"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+❯ Building...
+✔ Building...
+Application bundle generation failed. [1.576 seconds] - 2026-11-22T18:49:43.819Z
+
+X [ERROR] NG8001: 'app-uploader' is not a known element:
+1. If 'app-uploader' is an Angular component, then verify that it is included in the '@Component.imports' of this component.
+2. If 'app-uploader' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message. Find more at https://next.angular.dev/errors/NG8001 [plugin angular-compiler]
+
+    ./src/app/profile-form.html:1:0:
+      1 │ <app-uploader [formControl]="avatar" />
+        ╵ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ProfileForm.
+
+    ./src/app/profile-form.ts:14:15:
+      14 │   templateUrl: './profile-form.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8030: Event 'draftSavd' is not emitted by any directive applied to 'app-save-button' and it isn't a known native DOM event.
+1. If 'draftSavd' is an output of a directive, make sure the directive is applied to the element and check the output's name for typos.
+2. If you're listening to a custom event dispatched by a descendant element, dash-separated event names (e.g. 'my-event') are exempt from this check.
+3. To disable this check entirely, set 'strictUnclaimedEventNames' to false or remove it from the compiler options. [plugin angular-compiler]
+
+    ./src/app/profile-form.html:2:36:
+      2 │ <app-save-button (saveed)="save()" (draftSavd)="saveDraft()" />
+        ╵                                     ~~~~~~~~~
+
+  Error occurs in the template of component ProfileForm.
+
+    ./src/app/profile-form.ts:14:15:
+      14 │   templateUrl: './profile-form.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8119: Binding a number to the CSS property 'width' will have no effect. CSS requires units for length values. For example, use [style.width.px]="500" or [style.width]="'500px'" instead. Find more at https://v22.angular.dev/extended-diagnostics/NG8119 [plugin angular-compiler]
+
+    ./src/app/profile-form.html:4:26:
+      4 │ <div class="bar literal" [style.width]="500"></div>
+        ╵                           ~~~~~~~~~~~
+
+  Error occurs in the template of component ProfileForm.
+
+    ./src/app/profile-form.ts:14:15:
+      14 │   templateUrl: './profile-form.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~
+
+

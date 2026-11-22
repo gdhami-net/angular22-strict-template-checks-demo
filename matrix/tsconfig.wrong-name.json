@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "outDir": "../out-tsc/matrix-wrong-name",
+    "types": []
+  },
+  "include": [
+    "../src/**/*.ts",
+    "edge/**/*.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictUnknownElementWithDirectives": true
+  }
+}
